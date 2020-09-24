@@ -5,7 +5,8 @@ const MENU = document.querySelector('.sidemenu'),
     sidePanelDivider = document.querySelector('.sidepanel__divider'),
     sidePanelTitle = document.getElementById('sidepanelTitle');
 
-const svgElements = document.querySelectorAll('a.sidepanel__link > svg > path');
+const svgElements = document.querySelectorAll('a.sidepanel__link > svg > path'),
+    sideMenuLinks = document.querySelectorAll('ul.sidemenu__menu__list > li > a');
 
 //sidemenu animation
 
@@ -16,6 +17,12 @@ hamburger.addEventListener('click', () => {
 closeElem.addEventListener('click', () => {
     MENU.classList.remove('active');
 });
+
+for (link of sideMenuLinks) {
+    link.addEventListener('click', () => {
+        MENU.classList.remove('active');
+    });
+}
 
 //sidepanel animation (color change)
 
