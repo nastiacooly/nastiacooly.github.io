@@ -29,7 +29,7 @@ sideMenuLinks.forEach(link => {
 //sidepanel animation (color change)
 
 document.addEventListener('scroll', () => {
-    if(pageYOffset > 400) {
+    if(window.pageYOffset > 400) {
         sidePanelTitle.classList.remove('title_whc');
         sidePanelDivider.classList.add('sidepanel__divider_black');
         svgElements.forEach(elem => {
